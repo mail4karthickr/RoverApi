@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0U9-05-M3V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rover Images List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="roverImagesListVc" id="BYZ-38-t0r" customClass="RoverImagesListViewController" customModule="Nasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EkF-Bh-e2V">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="bNq-xG-i12">
+                                    <size key="itemSize" width="115" height="115"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="4Qj-9f-ERL" customClass="ImageCell" customModule="Nasa" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AOv-M9-tIC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="AOv-M9-tIC" secondAttribute="bottom" id="N1w-K2-6Qy"/>
+                                            <constraint firstItem="AOv-M9-tIC" firstAttribute="top" secondItem="4Qj-9f-ERL" secondAttribute="top" id="Opc-8Q-vNT"/>
+                                            <constraint firstItem="AOv-M9-tIC" firstAttribute="leading" secondItem="4Qj-9f-ERL" secondAttribute="leading" id="er2-qt-tx9"/>
+                                            <constraint firstAttribute="trailing" secondItem="AOv-M9-tIC" secondAttribute="trailing" id="esJ-vc-e3W"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="roverImage" destination="AOv-M9-tIC" id="Y7H-xA-duC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-HG-kxO">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.28387141773785884" green="0.80031526594293922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="535354752.19949698">
+                                    <!--2017-12-19 05:39:12 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EkF-Bh-e2V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BEg-Ky-7ho"/>
+                            <constraint firstItem="ifR-HG-kxO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ql4-kl-P2H"/>
+                            <constraint firstItem="ifR-HG-kxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uj8-dj-6rf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EkF-Bh-e2V" secondAttribute="trailing" id="a7a-fa-FJq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EkF-Bh-e2V" secondAttribute="bottom" id="aMQ-km-GRW"/>
+                            <constraint firstItem="ifR-HG-kxO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bbU-gB-NkU"/>
+                            <constraint firstItem="EkF-Bh-e2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qkL-D7-k8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ztw-UQ-MoM">
+                        <barButtonItem key="rightBarButtonItem" title="Date" id="hdX-Os-HbA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="ifR-HG-kxO" id="VZB-FJ-eJD"/>
+                        <outlet property="roverImages" destination="EkF-Bh-e2V" id="a0L-8T-NAA"/>
+                        <outlet property="showOrHideDatePicker" destination="hdX-Os-HbA" id="5jS-WL-rrI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1799" y="-195"/>
+        </scene>
+        <!--Rover Image View Controller-->
+        <scene sceneID="8uQ-xf-Lcp">
+            <objects>
+                <viewController storyboardIdentifier="roverImageVc" id="3T4-Qu-flT" customClass="RoverImageViewController" customModule="Nasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6I1-yI-rQM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t0a-vQ-yvb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YQY-mS-2ai" firstAttribute="bottom" secondItem="t0a-vQ-yvb" secondAttribute="bottom" id="AsC-Cb-TCp"/>
+                            <constraint firstItem="t0a-vQ-yvb" firstAttribute="leading" secondItem="YQY-mS-2ai" secondAttribute="leading" id="Fxa-G3-tdL"/>
+                            <constraint firstItem="t0a-vQ-yvb" firstAttribute="top" secondItem="YQY-mS-2ai" secondAttribute="top" id="xkD-U4-GGT"/>
+                            <constraint firstItem="YQY-mS-2ai" firstAttribute="trailing" secondItem="t0a-vQ-yvb" secondAttribute="trailing" id="zP8-2N-D6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YQY-mS-2ai"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="t0a-vQ-yvb" id="ivR-IO-h8Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MxF-nY-a7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="-194"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wMd-Ac-aLx">
+            <objects>
+                <navigationController storyboardIdentifier="rootNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="0U9-05-M3V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nRy-37-feA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sdq-Jd-dCx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fy-3X-AcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3455" y="-230"/>
+        </scene>
+    </scenes>
+</document>
