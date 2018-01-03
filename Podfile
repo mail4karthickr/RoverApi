@@ -16,4 +16,7 @@ pod 'RxAlamofire'
 pod 'MaterialComponents/Snackbar'
 pod "RxGesture"
 pod 'Action'
+pod 'RxAnimated'
+pod "RxSwiftExt"
+pod 'Result'
 end

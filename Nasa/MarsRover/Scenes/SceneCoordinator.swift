@@ -61,14 +61,25 @@ class SceneCoordinator: SceneCoordinatorType {
         if let presenter = currentViewController.presentingViewController {
             // dismiss a modal controller
             currentViewController.dismiss(animated: animated) {
+                self.currentViewController = SceneCoordinator.actualViewController(for: presenter)
                 subject.onCompleted()
             }
         } else if let navigationController = currentViewController.navigationController {
-            
+            // navigate up the stack
+            // one-off subscription to be notified when pop complete
+            _ = navigationController.rx.delegate
+                .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
+                .map { _ in }
+                .bind(to: subject)
+            guard navigationController.popViewController(animated: animated) != nil else {
+                fatalError("can't navigate back from \(currentViewController)")
+            }
+            currentViewController = SceneCoordinator.actualViewController(for: navigationController.viewControllers.last!)
         } else {
             fatalError("Not a modal, no navigation controller: can't navigate back from \(currentViewController)")
         }
         return subject.asObservable()
+            .take(1)
             .ignoreElements()
     }
     

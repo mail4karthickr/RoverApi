@@ -25,6 +25,8 @@
 		778BC1FC1FE4B907008B5CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778BC1FA1FE4B907008B5CE7 /* LaunchScreen.storyboard */; };
 		778BC2071FE4B907008B5CE7 /* NasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778BC2061FE4B907008B5CE7 /* NasaTests.swift */; };
 		778BC2121FE4B907008B5CE7 /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778BC2111FE4B907008B5CE7 /* NasaUITests.swift */; };
+		77B0CC5A1FF0B86D0047A65C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */; };
+		77B0CC5B1FF0B86D0047A65C /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */; };
 		77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA8391FE58F1C008F8B0B /* Photos.swift */; };
 		77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */; };
 		77CF09C41FEA47B700C0C450 /* RoverImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */; };
@@ -76,6 +78,8 @@
 		778BC20D1FE4B907008B5CE7 /* NasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		778BC2111FE4B907008B5CE7 /* NasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITests.swift; sourceTree = "<group>"; };
 		778BC2131FE4B907008B5CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		77CCA8391FE58F1C008F8B0B /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModel.swift; sourceTree = "<group>"; };
 		77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		77231A8E1FE622A70079B407 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				77B0CC551FF0B8280047A65C /* Common */,
 				77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */,
 				771D7DC41FEA4020002B5687 /* Scenes */,
 				770A51C01FE74CBC00511D35 /* Services */,
@@ -235,6 +240,15 @@
 				778BC2131FE4B907008B5CE7 /* Info.plist */,
 			);
 			path = NasaUITests;
+			sourceTree = "<group>";
+		};
+		77B0CC551FF0B8280047A65C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */,
+				77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D1CE71B32AB739E001EAB383 /* Pods */ = {
@@ -368,6 +382,7 @@
 				778BC1FC1FE4B907008B5CE7 /* LaunchScreen.storyboard in Resources */,
 				778BC1F91FE4B907008B5CE7 /* Assets.xcassets in Resources */,
 				778BC1F71FE4B907008B5CE7 /* Main.storyboard in Resources */,
+				77B0CC5B1FF0B86D0047A65C /* LoadingViewController.xib in Resources */,
 				773253E51FE79043006E63F6 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +441,13 @@
 				"${BUILT_PRODUCTS_DIR}/Moya-SwiftyJSONMapper/Moya_SwiftyJSONMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -447,11 +464,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_SwiftyJSONMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +505,7 @@
 				7783C1FF1FEB879A005B68E4 /* SceneTransitionType.swift in Sources */,
 				77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */,
 				771D7DC81FEA4044002B5687 /* SceneCordinatorType.swift in Sources */,
+				77B0CC5A1FF0B86D0047A65C /* LoadingViewController.swift in Sources */,
 				77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */,
 				770A51C21FE74CE400511D35 /* ImageCache.swift in Sources */,
 				778BC1F41FE4B906008B5CE7 /* RoverImagesListViewController.swift in Sources */,
@@ -600,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -651,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

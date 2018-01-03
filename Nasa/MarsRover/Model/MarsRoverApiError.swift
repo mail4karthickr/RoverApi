@@ -7,20 +7,27 @@
 //
 
 import Foundation
+import Moya
 
 enum MarsRoverApiError: Error {
-    case rerquestFailed
+    case requestFailed(forImageUrl: String, response: Response)
     case imageNotFound
     case networkNotAvailable
+    case noImageUrlsFound
+    case unknownError
     
     var errorMessage: String {
         switch self {
-        case .rerquestFailed:
+        case .requestFailed:
             return "Request failed"
         case .imageNotFound:
             return "Image not found"
         case .networkNotAvailable:
             return "Network not available"
+        case .noImageUrlsFound:
+            return "No images found. Please choose a different date."
+        case .unknownError:
+            return "unknown error"
         }
     }
 }
