@@ -16,6 +16,7 @@ class LoadingViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     static let sharedInstance = LoadingViewController()
+    
     let message = Variable<String>("Set your own loading message")
     let isHidden = Variable<Bool>(false)
     let disposeBag = DisposeBag()
@@ -27,7 +28,7 @@ class LoadingViewController: UIViewController {
             .drive(activityMessage.rx.text)
             .disposed(by: disposeBag)
         isHidden.asDriver()
-            .drive(activityIndicator.rx.isHidden)
+            .drive(self.view.rx.isHidden)
             .disposed(by: disposeBag)
     }
     
@@ -42,3 +43,21 @@ class LoadingViewController: UIViewController {
         activityIndicator.stopAnimating()
     }
 }
+
+extension Reactive where Base: LoadingViewController {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

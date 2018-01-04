@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770A51C21FE74CE400511D35 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A51C11FE74CE400511D35 /* ImageCache.swift */; };
+		770A51C21FE74CE400511D35 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A51C11FE74CE400511D35 /* ImageCacheService.swift */; };
 		771C2D371FE7024F008FB7A0 /* MarsRoverApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */; };
 		771D7DC61FEA4031002B5687 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D7DC51FEA4031002B5687 /* Scene.swift */; };
 		771D7DC81FEA4044002B5687 /* SceneCordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D7DC71FEA4044002B5687 /* SceneCordinatorType.swift */; };
@@ -31,7 +31,7 @@
 		77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */; };
 		77CF09C41FEA47B700C0C450 /* RoverImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */; };
 		77E6DE081FE4BE4C00D878FE /* Pods_Nasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E6DE091FE4BE4C00D878FE /* Pods_Nasa.framework */; };
-		77E6DE0B1FE4E3F000D878FE /* MarsRoverPhotosEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E6DE0A1FE4E3F000D878FE /* MarsRoverPhotosEndPoint.swift */; };
+		77E6DE0B1FE4E3F000D878FE /* MarsRoverApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E6DE0A1FE4E3F000D878FE /* MarsRoverApiService.swift */; };
 		77F820051FEF7E760059C118 /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		28EEAF25A3F875B9E707FEDD /* Pods-Nasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nasa/Pods-Nasa.release.xcconfig"; sourceTree = "<group>"; };
-		770A51C11FE74CE400511D35 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		770A51C11FE74CE400511D35 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverApiError.swift; sourceTree = "<group>"; };
 		771D7DC51FEA4031002B5687 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		771D7DC71FEA4044002B5687 /* SceneCordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCordinatorType.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModel.swift; sourceTree = "<group>"; };
 		77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesViewController.swift; sourceTree = "<group>"; };
 		77E6DE091FE4BE4C00D878FE /* Pods_Nasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Nasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77E6DE0A1FE4E3F000D878FE /* MarsRoverPhotosEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosEndPoint.swift; sourceTree = "<group>"; };
+		77E6DE0A1FE4E3F000D878FE /* MarsRoverApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverApiService.swift; sourceTree = "<group>"; };
 		77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
 		C354A3F536CC3B76F52082D4 /* Pods_Nasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F330DA5DC8E0EC12E1734862 /* Pods-Nasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nasa/Pods-Nasa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +119,8 @@
 		770A51C01FE74CBC00511D35 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				770A51C11FE74CE400511D35 /* ImageCache.swift */,
+				770A51C11FE74CE400511D35 /* ImageCacheService.swift */,
+				77E6DE0A1FE4E3F000D878FE /* MarsRoverApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -139,8 +140,9 @@
 		77231A8E1FE622A70079B407 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				7729F1A71FFDF267001EAA42 /* Cells */,
+				7729F1A51FFDF149001EAA42 /* RxExtensions */,
 				77B0CC551FF0B8280047A65C /* Common */,
-				77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */,
 				771D7DC41FEA4020002B5687 /* Scenes */,
 				770A51C01FE74CBC00511D35 /* Services */,
 				77231A911FE622D20079B407 /* ViewModel */,
@@ -153,10 +155,9 @@
 		77231A8F1FE622BE0079B407 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */,
+				7729F1A61FFDF1B3001EAA42 /* Errors */,
 				7783C2021FEB9FF4005B68E4 /* BindableType.swift */,
 				77CCA8391FE58F1C008F8B0B /* Photos.swift */,
-				77231A921FE622E70079B407 /* Requests */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				778BC1F31FE4B906008B5CE7 /* RoverImagesListViewController.swift */,
-				77231A941FE63B1D0079B407 /* ImageCell.swift */,
 				77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */,
 			);
 			path = ViewController;
@@ -180,12 +180,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		77231A921FE622E70079B407 /* Requests */ = {
+		7729F1A51FFDF149001EAA42 /* RxExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				77E6DE0A1FE4E3F000D878FE /* MarsRoverPhotosEndPoint.swift */,
+				77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */,
 			);
-			path = Requests;
+			path = RxExtensions;
+			sourceTree = "<group>";
+		};
+		7729F1A61FFDF1B3001EAA42 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		7729F1A71FFDF267001EAA42 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				77231A941FE63B1D0079B407 /* ImageCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		778BC1E51FE4B906008B5CE7 = {
@@ -507,11 +523,11 @@
 				771D7DC81FEA4044002B5687 /* SceneCordinatorType.swift in Sources */,
 				77B0CC5A1FF0B86D0047A65C /* LoadingViewController.swift in Sources */,
 				77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */,
-				770A51C21FE74CE400511D35 /* ImageCache.swift in Sources */,
+				770A51C21FE74CE400511D35 /* ImageCacheService.swift in Sources */,
 				778BC1F41FE4B906008B5CE7 /* RoverImagesListViewController.swift in Sources */,
 				778BC1F21FE4B906008B5CE7 /* AppDelegate.swift in Sources */,
 				771C2D371FE7024F008FB7A0 /* MarsRoverApiError.swift in Sources */,
-				77E6DE0B1FE4E3F000D878FE /* MarsRoverPhotosEndPoint.swift in Sources */,
+				77E6DE0B1FE4E3F000D878FE /* MarsRoverApiService.swift in Sources */,
 				771D7DCE1FEA413B002B5687 /* RoverImageViewModel.swift in Sources */,
 				77231A951FE63B1D0079B407 /* ImageCell.swift in Sources */,
 				7783C2011FEB9CF8005B68E4 /* Scene+ViewController.swift in Sources */,

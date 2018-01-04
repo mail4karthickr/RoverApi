@@ -18,7 +18,7 @@ import Action
 import RxAnimated
 import RxSwiftExt
 
-class RoverImagesListViewController: UIViewController, BindableType {
+final class RoverImagesListViewController: UIViewController, BindableType {
     
     @IBOutlet weak var roverImages: UICollectionView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -50,6 +50,12 @@ class RoverImagesListViewController: UIViewController, BindableType {
             .drive(showOrHideDatePicker.rx.title)
             .disposed(by: disposeBag)
         
+        self.viewModel
+            .showLoadingIndicator
+            .asDriver()
+            .drive(LoadingViewController.sharedInstance.isHidden)
+            .disposed(by: disposeBag)
+        
         
         let imageUrlsDownloaded = viewModel.startDownloadingImageUrls
             .asObservable()
@@ -69,7 +75,7 @@ class RoverImagesListViewController: UIViewController, BindableType {
             .filter { $0.isSuccess }
             .map { $0.value ?? [] }
             .asDriver(onErrorJustReturn: [])
-        .drive(self.roverImages.rx.items(cellIdentifier: "imageCell", cellType: ImageCell.self))
+            .drive(self.roverImages.rx.items(cellIdentifier: "imageCell", cellType: ImageCell.self))
             {(row, element, cell) in
                 cell.roverImage.rx.tapGesture().skip(1).map {
                         guard let imageView = $0.view as? UIImageView, let image = imageView.image else {
@@ -77,9 +83,9 @@ class RoverImagesListViewController: UIViewController, BindableType {
                         }
                         return image
                     }
-        .subscribe(self.viewModel.tapAction.inputs)
-        .disposed(by: cell.disposeBag)
-        print("imageurls bind triggred")
+            .subscribe(self.viewModel.tapAction.inputs)
+            .disposed(by: cell.disposeBag)
+      
         let roverImage = self.viewModel.getMarsRoverImages(imageUrl: element)
             .materialize()
             .share()
@@ -89,13 +95,6 @@ class RoverImagesListViewController: UIViewController, BindableType {
             .drive(cell.roverImage.rx.image)
             .disposed(by: cell.disposeBag)
                 
-            roverImage
-                .errors()
-                .subscribe { errorEvent in
-                    print("Error in downloading images \(errorEvent.element)")
-                
-            }
-            .disposed(by: cell.disposeBag)
         }
         .disposed(by: disposeBag)
     }

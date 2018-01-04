@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol ImageCaching {
+protocol ImageCacheServiceType {
     func saveImageToCache(data: Data, imageName: String) -> Bool
     func imageFromCacheWithUrl(name: String) -> UIImage?
 }
 
-struct ImageCache: ImageCaching {
+struct ImageCacheService: ImageCacheServiceType {
     
     func saveImageToCache(data: Data, imageName: String) -> Bool {
         let path = filePath(imageName: imageName)

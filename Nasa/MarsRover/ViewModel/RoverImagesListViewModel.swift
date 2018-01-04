@@ -16,8 +16,8 @@ import RxOptional
 import Alamofire
 
 struct RoverImagesListViewModel {
-    let provider = MoyaProvider<MarsRoverPhotos>()
-    let imageCache = ImageCache()
+    let provider = MoyaProvider<MarsRoverApiService>()
+    let imageCache = ImageCacheService()
     let sceneCoordinator: SceneCoordinatorType
     
     let datePickerIsHidden = Variable<Bool>(true)
@@ -45,7 +45,7 @@ struct RoverImagesListViewModel {
     }(self)
     
     internal func getMarsRoverPhotos(date: Date) -> Observable<Photos> {
-        return self.provider.rx.request(MarsRoverPhotos.marsPhotos(earthDate: date))
+        return self.provider.rx.request(MarsRoverApiService.marsPhotos(earthDate: date))
             .map(to: Photos.self).debug()
             .asObservable()
     }
@@ -68,7 +68,7 @@ struct RoverImagesListViewModel {
         if let cachedImage = imageCache.imageFromCacheWithUrl(name: imageUrl.lastPathComponent) {
             return Observable.just(cachedImage)
         } else {
-            return self.provider.rx.request(MarsRoverPhotos.getImage(imagePath: imageUrl.relativePath))
+            return self.provider.rx.request(MarsRoverApiService.getImage(imagePath: imageUrl.relativePath))
                 .map { response in
                         let _ = self.imageCache.saveImageToCache(data: response.data, imageName: imageUrl.lastPathComponent)
                         return response

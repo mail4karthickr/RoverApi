@@ -15,12 +15,12 @@ private extension String {
     }
 }
 
-enum MarsRoverPhotos {
+enum MarsRoverApiService {
     case marsPhotos(earthDate: Date)
     case getImage(imagePath: String)
 }
 
-extension MarsRoverPhotos: TargetType {
+extension MarsRoverApiService: TargetType {
     var baseURL: URL
     {
         switch self {
