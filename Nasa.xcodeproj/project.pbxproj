@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A757A31664BB22D3611BA8 /* Pods_NasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */; };
 		770A51C21FE74CE400511D35 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A51C11FE74CE400511D35 /* ImageCacheService.swift */; };
 		771C2D371FE7024F008FB7A0 /* MarsRoverApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */; };
 		771D7DC61FEA4031002B5687 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D7DC51FEA4031002B5687 /* Scene.swift */; };
@@ -14,7 +15,9 @@
 		771D7DCA1FEA405F002B5687 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D7DC91FEA405F002B5687 /* SceneCoordinator.swift */; };
 		771D7DCE1FEA413B002B5687 /* RoverImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D7DCD1FEA413B002B5687 /* RoverImageViewModel.swift */; };
 		77231A951FE63B1D0079B407 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77231A941FE63B1D0079B407 /* ImageCell.swift */; };
+		7731CC0620019D5800CEE7E2 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731CC0520019D5800CEE7E2 /* Date+String.swift */; };
 		773253E51FE79043006E63F6 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 773253E41FE79042006E63F6 /* default.png */; };
+		7754FF082003079E001AB323 /* GetPhotosMissingImgSrc.json in Resources */ = {isa = PBXBuildFile; fileRef = 7754FF072003079E001AB323 /* GetPhotosMissingImgSrc.json */; };
 		7783C1FF1FEB879A005B68E4 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783C1FE1FEB879A005B68E4 /* SceneTransitionType.swift */; };
 		7783C2011FEB9CF8005B68E4 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783C2001FEB9CF8005B68E4 /* Scene+ViewController.swift */; };
 		7783C2031FEB9FF4005B68E4 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783C2021FEB9FF4005B68E4 /* BindableType.swift */; };
@@ -23,13 +26,15 @@
 		778BC1F71FE4B907008B5CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778BC1F51FE4B907008B5CE7 /* Main.storyboard */; };
 		778BC1F91FE4B907008B5CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 778BC1F81FE4B907008B5CE7 /* Assets.xcassets */; };
 		778BC1FC1FE4B907008B5CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778BC1FA1FE4B907008B5CE7 /* LaunchScreen.storyboard */; };
-		778BC2071FE4B907008B5CE7 /* NasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778BC2061FE4B907008B5CE7 /* NasaTests.swift */; };
 		778BC2121FE4B907008B5CE7 /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778BC2111FE4B907008B5CE7 /* NasaUITests.swift */; };
 		77B0CC5A1FF0B86D0047A65C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */; };
 		77B0CC5B1FF0B86D0047A65C /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */; };
+		77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */; };
 		77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA8391FE58F1C008F8B0B /* Photos.swift */; };
 		77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */; };
 		77CF09C41FEA47B700C0C450 /* RoverImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */; };
+		77DF1C032002B93A000D4EB6 /* GetPhotos.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DF1C022002B93A000D4EB6 /* GetPhotos.json */; };
+		77DF1C062002BD9B000D4EB6 /* JsonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF1C052002BD9B000D4EB6 /* JsonTypes.swift */; };
 		77E6DE081FE4BE4C00D878FE /* Pods_Nasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E6DE091FE4BE4C00D878FE /* Pods_Nasa.framework */; };
 		77E6DE0B1FE4E3F000D878FE /* MarsRoverApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E6DE0A1FE4E3F000D878FE /* MarsRoverApiService.swift */; };
 		77F820051FEF7E760059C118 /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */; };
@@ -54,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		28EEAF25A3F875B9E707FEDD /* Pods-Nasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nasa/Pods-Nasa.release.xcconfig"; sourceTree = "<group>"; };
+		2DD38A50461A141ED60237E7 /* Pods-NasaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests.release.xcconfig"; sourceTree = "<group>"; };
+		65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		770A51C11FE74CE400511D35 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverApiError.swift; sourceTree = "<group>"; };
 		771D7DC51FEA4031002B5687 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -61,7 +68,10 @@
 		771D7DC91FEA405F002B5687 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		771D7DCD1FEA413B002B5687 /* RoverImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImageViewModel.swift; sourceTree = "<group>"; };
 		77231A941FE63B1D0079B407 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		7731CC0520019D5800CEE7E2 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		7731CC082001A10700CEE7E2 /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773253E41FE79042006E63F6 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		7754FF072003079E001AB323 /* GetPhotosMissingImgSrc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetPhotosMissingImgSrc.json; sourceTree = "<group>"; };
 		7783C1FE1FEB879A005B68E4 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		7783C2001FEB9CF8005B68E4 /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
 		7783C2021FEB9FF4005B68E4 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
@@ -73,20 +83,23 @@
 		778BC1FB1FE4B907008B5CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		778BC1FD1FE4B907008B5CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778BC2021FE4B907008B5CE7 /* NasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		778BC2061FE4B907008B5CE7 /* NasaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTests.swift; sourceTree = "<group>"; };
 		778BC2081FE4B907008B5CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778BC20D1FE4B907008B5CE7 /* NasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		778BC2111FE4B907008B5CE7 /* NasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITests.swift; sourceTree = "<group>"; };
 		778BC2131FE4B907008B5CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModelTests.swift; sourceTree = "<group>"; };
 		77CCA8391FE58F1C008F8B0B /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModel.swift; sourceTree = "<group>"; };
 		77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesViewController.swift; sourceTree = "<group>"; };
+		77DF1C022002B93A000D4EB6 /* GetPhotos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetPhotos.json; sourceTree = "<group>"; };
+		77DF1C052002BD9B000D4EB6 /* JsonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTypes.swift; sourceTree = "<group>"; };
 		77E6DE091FE4BE4C00D878FE /* Pods_Nasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Nasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E6DE0A1FE4E3F000D878FE /* MarsRoverApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverApiService.swift; sourceTree = "<group>"; };
 		77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
 		C354A3F536CC3B76F52082D4 /* Pods_Nasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6742DF947A5B04416D574D7 /* Pods-NasaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F330DA5DC8E0EC12E1734862 /* Pods-Nasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nasa/Pods-Nasa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A757A31664BB22D3611BA8 /* Pods_NasaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +154,7 @@
 		77231A8E1FE622A70079B407 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				77DF1BFF2002B8BE000D4EB6 /* Stubbed Responses */,
 				7729F1A71FFDF267001EAA42 /* Cells */,
 				7729F1A51FFDF149001EAA42 /* RxExtensions */,
 				77B0CC551FF0B8280047A65C /* Common */,
@@ -155,6 +170,7 @@
 		77231A8F1FE622BE0079B407 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77DF1C042002BD81000D4EB6 /* Enums */,
 				7729F1A61FFDF1B3001EAA42 /* Errors */,
 				7783C2021FEB9FF4005B68E4 /* BindableType.swift */,
 				77CCA8391FE58F1C008F8B0B /* Photos.swift */,
@@ -184,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				77F820041FEF7E760059C118 /* UINavigationController+Rx.swift */,
+				7731CC0520019D5800CEE7E2 /* Date+String.swift */,
 			);
 			path = RxExtensions;
 			sourceTree = "<group>";
@@ -243,8 +260,8 @@
 		778BC2051FE4B907008B5CE7 /* NasaTests */ = {
 			isa = PBXGroup;
 			children = (
-				778BC2061FE4B907008B5CE7 /* NasaTests.swift */,
 				778BC2081FE4B907008B5CE7 /* Info.plist */,
+				77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -267,11 +284,30 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		77DF1BFF2002B8BE000D4EB6 /* Stubbed Responses */ = {
+			isa = PBXGroup;
+			children = (
+				77DF1C022002B93A000D4EB6 /* GetPhotos.json */,
+				7754FF072003079E001AB323 /* GetPhotosMissingImgSrc.json */,
+			);
+			path = "Stubbed Responses";
+			sourceTree = "<group>";
+		};
+		77DF1C042002BD81000D4EB6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				77DF1C052002BD9B000D4EB6 /* JsonTypes.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		D1CE71B32AB739E001EAB383 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F330DA5DC8E0EC12E1734862 /* Pods-Nasa.debug.xcconfig */,
 				28EEAF25A3F875B9E707FEDD /* Pods-Nasa.release.xcconfig */,
+				C6742DF947A5B04416D574D7 /* Pods-NasaTests.debug.xcconfig */,
+				2DD38A50461A141ED60237E7 /* Pods-NasaTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -279,8 +315,10 @@
 		FE01CD4C10CE59A0F259661D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7731CC082001A10700CEE7E2 /* Moya.framework */,
 				77E6DE091FE4BE4C00D878FE /* Pods_Nasa.framework */,
 				C354A3F536CC3B76F52082D4 /* Pods_Nasa.framework */,
+				65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -312,9 +350,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 778BC2191FE4B907008B5CE7 /* Build configuration list for PBXNativeTarget "NasaTests" */;
 			buildPhases = (
+				759C1A5633DC373430696B4B /* [CP] Check Pods Manifest.lock */,
 				778BC1FE1FE4B907008B5CE7 /* Sources */,
 				778BC1FF1FE4B907008B5CE7 /* Frameworks */,
 				778BC2001FE4B907008B5CE7 /* Resources */,
+				D5510952801EFA649AD27D76 /* [CP] Embed Pods Frameworks */,
+				B4A5E27BC0B12B4C37B659F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,6 +439,8 @@
 				778BC1FC1FE4B907008B5CE7 /* LaunchScreen.storyboard in Resources */,
 				778BC1F91FE4B907008B5CE7 /* Assets.xcassets in Resources */,
 				778BC1F71FE4B907008B5CE7 /* Main.storyboard in Resources */,
+				7754FF082003079E001AB323 /* GetPhotosMissingImgSrc.json in Resources */,
+				77DF1C032002B93A000D4EB6 /* GetPhotos.json in Resources */,
 				77B0CC5B1FF0B86D0047A65C /* LoadingViewController.xib in Resources */,
 				773253E51FE79043006E63F6 /* default.png in Resources */,
 			);
@@ -509,6 +552,99 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nasa/Pods-Nasa-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		759C1A5633DC373430696B4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NasaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A5E27BC0B12B4C37B659F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5510952801EFA649AD27D76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-SwiftyJSONMapper/Moya_SwiftyJSONMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_SwiftyJSONMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -517,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7783C2031FEB9FF4005B68E4 /* BindableType.swift in Sources */,
+				7731CC0620019D5800CEE7E2 /* Date+String.swift in Sources */,
 				77CF09C41FEA47B700C0C450 /* RoverImagesViewController.swift in Sources */,
 				7783C1FF1FEB879A005B68E4 /* SceneTransitionType.swift in Sources */,
 				77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */,
@@ -532,6 +669,7 @@
 				77231A951FE63B1D0079B407 /* ImageCell.swift in Sources */,
 				7783C2011FEB9CF8005B68E4 /* Scene+ViewController.swift in Sources */,
 				771D7DC61FEA4031002B5687 /* Scene.swift in Sources */,
+				77DF1C062002BD9B000D4EB6 /* JsonTypes.swift in Sources */,
 				77F820051FEF7E760059C118 /* UINavigationController+Rx.swift in Sources */,
 				771D7DCA1FEA405F002B5687 /* SceneCoordinator.swift in Sources */,
 			);
@@ -541,7 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				778BC2071FE4B907008B5CE7 /* NasaTests.swift in Sources */,
+				77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +865,7 @@
 		};
 		778BC21A1FE4B907008B5CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6742DF947A5B04416D574D7 /* Pods-NasaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -743,6 +882,7 @@
 		};
 		778BC21B1FE4B907008B5CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD38A50461A141ED60237E7 /* Pods-NasaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

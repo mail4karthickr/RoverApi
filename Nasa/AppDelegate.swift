@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let sceneCoordinator = SceneCoordinator(window: window!)
-        let imagesListViewModel = RoverImagesListViewModel(coordinator: sceneCoordinator)
+        let provider = MoyaProvider<MarsRoverApiService>()
+        let imageCache = ImageCacheService()
+        let imagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCache)
         let firstScene = Scene.roverImagesList(imagesListViewModel)
         sceneCoordinator.transition(to: firstScene, type: .root)
         return true

@@ -12,5 +12,69 @@
             breakpointStackSelectionBehavior = "1">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
+            timestampString = "537074069.080832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "stubbedResponse(_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "init() -&gt; TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt; in TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt;"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karthick/Desktop/Nasa/Nasa/MarsRover/Services/MarsRoverApiService.swift"
+                  timestampString = "537073929.0243551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__deallocating_deinit in TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt;"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karthick/Desktop/Nasa/Nasa/MarsRover/Services/MarsRoverApiService.swift"
+                  timestampString = "537073929.0270621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
+            timestampString = "537074069.081309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "stubbedResponse(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

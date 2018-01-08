@@ -16,8 +16,8 @@ import RxOptional
 import Alamofire
 
 struct RoverImagesListViewModel {
-    let provider = MoyaProvider<MarsRoverApiService>()
-    let imageCache = ImageCacheService()
+    let provider: MoyaProvider<MarsRoverApiService>
+    let imageCache: ImageCacheServiceType
     let sceneCoordinator: SceneCoordinatorType
     
     let datePickerIsHidden = Variable<Bool>(true)
@@ -25,8 +25,10 @@ struct RoverImagesListViewModel {
     let barButtonTitle = Variable<String>("Date")
     let startDownloadingImageUrls = Variable<Bool>(false)
     
-    init(coordinator: SceneCoordinatorType) {
+    init(_ coordinator: SceneCoordinatorType,_ provider: MoyaProvider<MarsRoverApiService>,_ imageCache: ImageCacheServiceType) {
         self.sceneCoordinator = coordinator
+        self.imageCache = imageCache
+        self.provider = provider
     }
     
     lazy var showDatePicker: Action<String, Swift.Never> = { this in
@@ -44,13 +46,16 @@ struct RoverImagesListViewModel {
         }
     }(self)
     
-    internal func getMarsRoverPhotos(date: Date) -> Observable<Photos> {
+    func getMarsRoverPhotos(date: Date) -> Observable<Photos> {
         return self.provider.rx.request(MarsRoverApiService.marsPhotos(earthDate: date))
-            .map(to: Photos.self).debug()
+            .map(to: Photos.self)
             .asObservable()
+            .catchError { error in
+                    throw error
+            }
     }
     
-    internal func getMarsRoverImageUrls(date: Date) -> Observable<Result<[URL]>> {
+    func getMarsRoverImageUrls(date: Date) -> Observable<Result<[URL]>> {
         return self.getMarsRoverPhotos(date: date)
             .map { $0.photoInfo.map { $0.imageSrc } }
             .errorOnEmpty()
@@ -64,7 +69,7 @@ struct RoverImagesListViewModel {
         
     }
     
-    internal func getMarsRoverImages(imageUrl: URL) -> Observable<UIImage?> {
+    func getMarsRoverImages(imageUrl: URL) -> Observable<UIImage?> {
         if let cachedImage = imageCache.imageFromCacheWithUrl(name: imageUrl.lastPathComponent) {
             return Observable.just(cachedImage)
         } else {

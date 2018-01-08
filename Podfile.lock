@@ -93,6 +93,8 @@ PODS:
   - RxAnimated/Core (0.2.0):
     - RxCocoa (~> 4.0.0)
     - RxSwift (~> 4.0.0)
+  - RxBlocking (4.0.0):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxDataSources (3.0.2):
@@ -110,6 +112,8 @@ PODS:
     - RxSwiftExt/Core (= 3.0.0)
   - RxSwiftExt/Core (3.0.0):
     - RxSwift (~> 4.0)
+  - RxTest (4.0.0):
+    - RxSwift (~> 4.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
@@ -124,12 +128,14 @@ DEPENDENCIES:
   - Result
   - RxAlamofire
   - RxAnimated
+  - RxBlocking
   - RxCocoa
   - RxDataSources
   - RxGesture
   - RxOptional
   - RxSwift
   - RxSwiftExt
+  - RxTest
 
 SPEC CHECKSUMS:
   Action: d60087ebce41b969d1afdad01e2fa1372a82f26e
@@ -145,14 +151,16 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxAnimated: b34d4ed191a0639b47d9280b08d8cc898da5de57
+  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
   RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   RxSwiftExt: b06c47dff66cd33ca7683bba1e74b0c5c8e3592e
+  RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 57e65f94a7157b2527596079fce7509f07bfd4e8
+PODFILE CHECKSUM: a114dc19635f4da49279489d88dcdec113b128b7
 
 COCOAPODS: 1.3.1

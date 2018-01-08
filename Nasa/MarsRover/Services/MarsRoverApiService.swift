@@ -9,12 +9,6 @@
 import Foundation
 import Moya
 
-private extension String {
-    var URLEscapedString: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-    }
-}
-
 enum MarsRoverApiService {
     case marsPhotos(earthDate: Date)
     case getImage(imagePath: String)
@@ -43,7 +37,7 @@ extension MarsRoverApiService: TargetType {
     var sampleData: Data {
         switch self {
         case .marsPhotos(_):
-            return "{{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\", \"name\": \"Router\"}}}".data(using: .utf8)!
+            return stubbedResponse("GetPhotos")
         case .getImage(_):
             return "{{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\", \"name\": \"Router\"}}}".data(using: .utf8)!
         }
@@ -73,3 +67,24 @@ extension MarsRoverApiService: TargetType {
         return URLEncoding.default
     }
 }
+
+// MARK: - Provider support
+
+func stubbedResponse(_ filename: String) -> Data! {
+    @objc class TestClass: NSObject { }
+    
+    let bundle = Bundle(for: TestClass.self)
+    let path = bundle.path(forResource: filename, ofType: "json")
+    return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
+}
+
+private extension String {
+    var URLEscapedString: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }
+}
+
+
+
+
+
