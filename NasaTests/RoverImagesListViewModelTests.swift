@@ -20,7 +20,7 @@ class RoverImagesListViewModelTests: XCTestCase {
   
     var provider: MoyaProvider<MarsRoverApiService>!
     var roverImagesListViewModel: RoverImagesListViewModel!
-    var sceneCoordinator: SceneCoordinator!
+    var sceneCoordinator: SceneCoordinatorType!
     var imageCacheServiceType: ImageCacheServiceType!
     let disposeBag = DisposeBag()
     var scheduler: TestScheduler!
@@ -33,6 +33,15 @@ class RoverImagesListViewModelTests: XCTestCase {
         window.rootViewController = UIViewController()
         sceneCoordinator = SceneCoordinator(window: window)
         scheduler = TestScheduler(initialClock: 0)
+    }
+    
+    func testIntializer() {
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        
+        XCTAssertNotNil(roverImagesListViewModel.sceneCoordinator)
+        XCTAssertNotNil(roverImagesListViewModel.provider)
+        XCTAssertNotNil(roverImagesListViewModel.imageCache)
     }
     
     func testGetMarsRoverPhotosForValidJson() {
@@ -126,24 +135,32 @@ class RoverImagesListViewModelTests: XCTestCase {
         XCTAssertNotNil(result.value)
     }
     
+    func testDatePickerActionWhenTitleIsDate() {
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        
+        _ = roverImagesListViewModel.showDatePicker.execute("Date").toBlocking()
+        
+        XCTAssertFalse(roverImagesListViewModel.datePickerIsHidden.value)
+        XCTAssertEqual(roverImagesListViewModel.barButtonTitle.value, "Done")
+    }
+    
+    func testDatePickerActionWhenTitleIsDone() {
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        
+        _ = roverImagesListViewModel.showDatePicker.execute("Done").toBlocking()
+        
+        XCTAssertTrue(roverImagesListViewModel.datePickerIsHidden.value)
+        XCTAssertTrue(roverImagesListViewModel.showLoadingIndicator.value)
+        XCTAssertTrue(roverImagesListViewModel.startDownloadingImageUrls.value)
+        XCTAssertEqual(roverImagesListViewModel.barButtonTitle.value, "Date")
+    }
+    
     override func tearDown() {
         //remove the cahced test image.
         _ = imageCacheServiceType.removeImageFromCache(imageName: "testPhoto")
         super.tearDown()
-    }
-    
-    func testGetImageUrls() {
-        
-        
-        
-        
-        //When
-        let photosObservable = roverImagesListViewModel.getMarsRoverImageUrls(date: Date().dateFromString(string: "2014-12-25")!)
-        let result = try! photosObservable.toBlocking().first()!
-        
-        //Then
-        XCTAssertNotNil(result.value, "Url list is nil")
-        XCTAssertEqual(result.value?.count, 4)
     }
     
     let endPointClosureForGetPhotos = { (target: MarsRoverApiService) -> Endpoint<MarsRoverApiService> in
