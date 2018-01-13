@@ -17,13 +17,14 @@ import Moya_ModelMapper
 @testable import Nasa
 
 class RoverImagesListViewModelTests: XCTestCase {
-    
-    var scheduler: ConcurrentDispatchQueueScheduler!
+  
     var provider: MoyaProvider<MarsRoverApiService>!
     var roverImagesListViewModel: RoverImagesListViewModel!
     var sceneCoordinator: SceneCoordinator!
-    var imageCacheServiceType: ImageCacheService!
+    var imageCacheServiceType: ImageCacheServiceType!
     let disposeBag = DisposeBag()
+    var scheduler: TestScheduler!
+    var subscription: Disposable!
     
     override func setUp() {
         super.setUp()
@@ -31,10 +32,10 @@ class RoverImagesListViewModelTests: XCTestCase {
         let window = UIWindow()
         window.rootViewController = UIViewController()
         sceneCoordinator = SceneCoordinator(window: window)
-        scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+        scheduler = TestScheduler(initialClock: 0)
     }
     
-    func testGetMarsRoverPhotosShouldReturnPhotos() {
+    func testGetMarsRoverPhotosForValidJson() {
         provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
         roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
         
@@ -45,7 +46,7 @@ class RoverImagesListViewModelTests: XCTestCase {
         XCTAssertEqual(result.photoInfo.first?.imageSrc.absoluteString, "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG")
     }
     
-    func testGetMarsRoverImagesForMissingImgSrc() {
+    func testGetMarsRoverPhotosForMissingImgSrcInJson() {
         provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotosMissingImgSrc, stubClosure: MoyaProvider.immediatelyStub)
         roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
         
@@ -60,13 +61,98 @@ class RoverImagesListViewModelTests: XCTestCase {
         XCTAssertTrue(errored)
     }
     
+    func testGetMarsRoverImageUrlsForValidPhotoDetailsArray() {
+        class MockRoverImagesListViewModel: RoverImagesListViewModel {
+            override func getMarsRoverPhotos(date: Date) -> Observable<Photos> {
+                return Observable.just(PhotosMock.getMockPhoto())
+            }
+        }
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        let mockRoverImagesListViewModel = MockRoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        let response = mockRoverImagesListViewModel.getMarsRoverImageUrls(date: Date.init())
+        
+        let result = try! response.toBlocking().first()!
+        
+        XCTAssertTrue(result.isSuccess)
+        XCTAssertNotNil(result.value)
+        XCTAssertEqual(result.value?.count, PhotosMock.getMockPhoto().photoInfo.count)
+        XCTAssertFalse(mockRoverImagesListViewModel.showLoadingIndicator.value)
+    }
+    
+    func testGetMarsRoverImageUrlsWhenPhotoDetailsArrayIsEmpty() {
+        class MockRoverImagesListViewModel: RoverImagesListViewModel {
+            override func getMarsRoverPhotos(date: Date) -> Observable<Photos> {
+                return Observable.just(PhotosMock.getEmptyPhotoDetailsMock())
+            }
+        }
+        
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        let mockRoverImagesListViewModel = MockRoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        let response = mockRoverImagesListViewModel.getMarsRoverImageUrls(date: Date.init())
+        
+        let result = try! response.toBlocking().first()!
+        
+        XCTAssertTrue(result.isFailure)
+        XCTAssertNotNil(result.error)
+        let apiError = result.error as! MarsRoverApiError
+        XCTAssertEqual(apiError.errorMessage, MarsRoverApiError.imageNotFound.errorMessage)
+        XCTAssertFalse(mockRoverImagesListViewModel.showLoadingIndicator.value)
+    }
+    
+    func testGetMarsRoverImageFromCache() {
+        
+        //save image to cache.
+        let testBundle = Bundle(for: type(of: self))
+        let filePath = testBundle.path(forResource: "testPhoto", ofType: "png")!
+        if !imageCacheServiceType.saveImageToCache(data: UIImagePNGRepresentation(UIImage(named: filePath)!)!, imageName: "testPhoto") {
+            XCTFail("Image cannot be saved in documents directory")
+        }
+
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        let roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        let response = roverImagesListViewModel.getMarsRoverImages(imageUrl: URL(string: "http://www.google.com/testPhoto")!)
+        
+        let result = try! response.toBlocking().first()!
+        XCTAssertNotNil(result)
+    }
+    
+    func testGetMarsRoverImageFromApi() {
+        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
+        
+        let photosObservable = roverImagesListViewModel.getMarsRoverImages(imageUrl: URL(string: "http://www.google.com/testPhoto")!)
+        let result = try! photosObservable.toBlocking().first()!
+        
+        XCTAssertNotNil(result.value)
+    }
+    
+    override func tearDown() {
+        //remove the cahced test image.
+        _ = imageCacheServiceType.removeImageFromCache(imageName: "testPhoto")
+        super.tearDown()
+    }
+    
+    func testGetImageUrls() {
+        
+        
+        
+        
+        //When
+        let photosObservable = roverImagesListViewModel.getMarsRoverImageUrls(date: Date().dateFromString(string: "2014-12-25")!)
+        let result = try! photosObservable.toBlocking().first()!
+        
+        //Then
+        XCTAssertNotNil(result.value, "Url list is nil")
+        XCTAssertEqual(result.value?.count, 4)
+    }
+    
     let endPointClosureForGetPhotos = { (target: MarsRoverApiService) -> Endpoint<MarsRoverApiService> in
         return Endpoint(url: "test", sampleResponseClosure: {.networkResponse(200, stubbedResponse("GetPhotos"))}, method: target.method, task: target.task, httpHeaderFields: target.headers)
     }
     
     let endPointClosureForGetPhotosMissingImgSrc = { (target: MarsRoverApiService) -> Endpoint<MarsRoverApiService> in
         return Endpoint(url: "test", sampleResponseClosure: {.networkResponse(200, stubbedResponse("GetPhotosMissingImgSrc"))}, method: target.method, task: target.task, httpHeaderFields: target.headers)
+        
     }
-    
     
 }

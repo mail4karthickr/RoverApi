@@ -10,33 +10,42 @@ import Foundation
 import Moya_ModelMapper
 import Mapper
 
-struct Photos: Mappable {
+public struct Photos {
     let photoInfo: [PhotoDetails]
-    init(map: Mapper) throws {
+}
+
+extension Photos: Mappable {
+    public init(map: Mapper) throws {
         try photoInfo = map.from("photos")
     }
 }
 
-struct PhotoDetails: Mappable {
-    let id: Int
-    let sol: Int
-    let imageSrc: URL
-    init(map: Mapper) throws {
+public struct PhotoDetails {
+    public let id: Int
+    public let sol: Int
+    public let imageSrc: URL
+}
+
+extension PhotoDetails: Mappable {
+    public init(map: Mapper) throws {
         try id = map.from("id")
         try sol = map.from("sol")
         try imageSrc = map.from("img_src")
     }
 }
 
-struct Camera: Mappable {
-    let id: Int
-    let name: String
-    let roverId: Int
-    let fullName: String
-    init(map: Mapper) throws {
+public struct PhotoDetailsSample {
+    public let id: Int
+    public let sol: Int
+    public let imageSrc: URL
+}
+
+extension PhotoDetailsSample: Mappable {
+    public init(map: Mapper) throws {
         try id = map.from("id")
-        try name = map.from("name")
-        try roverId = map.from("rover_id")
-        try fullName = map.from("full_name")
+        try sol = map.from("sol")
+        try imageSrc = map.from("img_src")
     }
 }
+
+

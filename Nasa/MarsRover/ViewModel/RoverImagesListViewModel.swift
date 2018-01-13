@@ -15,7 +15,7 @@ import Action
 import RxOptional
 import Alamofire
 
-struct RoverImagesListViewModel {
+class RoverImagesListViewModel {
     let provider: MoyaProvider<MarsRoverApiService>
     let imageCache: ImageCacheServiceType
     let sceneCoordinator: SceneCoordinatorType
@@ -64,6 +64,7 @@ struct RoverImagesListViewModel {
                 return .success($0)
             }
             .catchError { error in
+                self.showLoadingIndicator.value = false
                 return Observable.just(.failure(MarsRoverApiError.imageNotFound))
             }
         

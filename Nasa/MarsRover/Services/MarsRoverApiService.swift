@@ -39,7 +39,7 @@ extension MarsRoverApiService: TargetType {
         case .marsPhotos(_):
             return stubbedResponse("GetPhotos")
         case .getImage(_):
-            return "{{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\", \"name\": \"Router\"}}}".data(using: .utf8)!
+            return stubbedResponse("testPhoto")
         }
     }
     
