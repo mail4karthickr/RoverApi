@@ -40,7 +40,7 @@ struct ImageCacheService: ImageCacheServiceType {
     }
     
     func removeItemFromDocumentsDirectory(itemName: String) -> Bool {
-        guard let _ = try? FileManager.default.removeItem(atPath: filePathAtDocumentsDirectory(imageName: itemName).absoluteString) else {
+        guard let _ = try? FileManager.default.removeItem(at: filePathAtDocumentsDirectory(imageName: "testPhoto")) else {
             return false
         }
         return true

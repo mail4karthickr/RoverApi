@@ -18,88 +18,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
-            timestampString = "537567838.763324"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "stubbedResponse(_:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "init() -&gt; TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt; in TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt;"
-                  moduleName = "Nasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/karthick/Desktop/Nasa/Nasa/MarsRover/Services/MarsRoverApiService.swift"
-                  timestampString = "537073929.0243551"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__deallocating_deinit in TestClass #1 in Nasa.stubbedResponse(Swift.String) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Foundation.Data&gt;"
-                  moduleName = "Nasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/karthick/Desktop/Nasa/Nasa/MarsRover/Services/MarsRoverApiService.swift"
-                  timestampString = "537073929.0270621"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
-            timestampString = "537567838.763392"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "stubbedResponse(_:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nasa/MarsRover/Model/Photos.swift"
-            timestampString = "537512169.440128"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init(map:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "NasaTests/RoverImagesListViewModelTests.swift"
-            timestampString = "537567838.7634749"
+            timestampString = "537582245.907759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -108,34 +28,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NasaTests.RoverImagesListViewModelTests.testGetMarsRoverImageUrlsWhenPhotoDetailsArrayIsEmpty() -&gt; ()"
                   moduleName = "NasaTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/karthick/Desktop/Nasa/NasaTests/RoverImagesListViewModelTests.swift"
-                  timestampString = "537562899.8215179"
+                  timestampString = "537576936.747743"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "1797">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1770">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in NasaTests.RoverImagesListViewModelTests.testGetMarsRoverImageUrlsWhenPhotoDetailsArrayIsEmpty() -&gt; ()"
                   moduleName = "NasaTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/karthick/Desktop/Nasa/NasaTests/RoverImagesListViewModelTests.swift"
-                  timestampString = "537562899.823989"
+                  timestampString = "537576936.7504081"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "25">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "42">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -146,29 +66,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Nasa/MarsRover/ViewModel/RoverImagesListViewModel.swift"
-            timestampString = "537567838.763875"
+            filePath = "NasaTests/RoverImagesListViewModelTests.swift"
+            timestampString = "537582245.908484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "getMarsRoverImages(imageUrl:)"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "testGetMarsRoverImageFromCache()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Nasa/MarsRover/Services/ImageCacheService.swift"
-            timestampString = "537567838.764147"
+            timestampString = "537582245.908784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "removeImageFromCache(imageName:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "saveImageToCache(data:imageName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/RoverImagesListViewModelTests.swift"
+            timestampString = "537582245.909254"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "tearDown()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

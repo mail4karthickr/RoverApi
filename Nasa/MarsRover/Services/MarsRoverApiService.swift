@@ -39,7 +39,7 @@ extension MarsRoverApiService: TargetType {
         case .marsPhotos(_):
             return stubbedResponse("GetPhotos")
         case .getImage(_):
-            return stubbedResponse("testPhoto")
+            return UIImagePNGRepresentation(UIImage(named: "testPhoto")!)!
         }
     }
     

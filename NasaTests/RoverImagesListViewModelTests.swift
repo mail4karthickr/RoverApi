@@ -23,7 +23,6 @@ class RoverImagesListViewModelTests: XCTestCase {
     var sceneCoordinator: SceneCoordinatorType!
     var imageCacheServiceType: ImageCacheServiceType!
     let disposeBag = DisposeBag()
-    var scheduler: TestScheduler!
     var subscription: Disposable!
     
     override func setUp() {
@@ -32,7 +31,6 @@ class RoverImagesListViewModelTests: XCTestCase {
         let window = UIWindow()
         window.rootViewController = UIViewController()
         sceneCoordinator = SceneCoordinator(window: window)
-        scheduler = TestScheduler(initialClock: 0)
     }
     
     func testIntializer() {
@@ -94,7 +92,6 @@ class RoverImagesListViewModelTests: XCTestCase {
                 return Observable.just(PhotosMock.getEmptyPhotoDetailsMock())
             }
         }
-        
         provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
         let mockRoverImagesListViewModel = MockRoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
         let response = mockRoverImagesListViewModel.getMarsRoverImageUrls(date: Date.init())
@@ -120,13 +117,13 @@ class RoverImagesListViewModelTests: XCTestCase {
         provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
         let roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
         let response = roverImagesListViewModel.getMarsRoverImages(imageUrl: URL(string: "http://www.google.com/testPhoto")!)
-        
         let result = try! response.toBlocking().first()!
+        
         XCTAssertNotNil(result)
     }
     
     func testGetMarsRoverImageFromApi() {
-        provider = MoyaProvider<MarsRoverApiService>(endpointClosure: endPointClosureForGetPhotos, stubClosure: MoyaProvider.immediatelyStub)
+        provider = MoyaProvider<MarsRoverApiService>(stubClosure: MoyaProvider.immediatelyStub)
         roverImagesListViewModel = RoverImagesListViewModel(sceneCoordinator, provider, imageCacheServiceType)
         
         let photosObservable = roverImagesListViewModel.getMarsRoverImages(imageUrl: URL(string: "http://www.google.com/testPhoto")!)
@@ -162,6 +159,8 @@ class RoverImagesListViewModelTests: XCTestCase {
         _ = imageCacheServiceType.removeImageFromCache(imageName: "testPhoto")
         super.tearDown()
     }
+    
+    // MARK: Test helpers
     
     let endPointClosureForGetPhotos = { (target: MarsRoverApiService) -> Endpoint<MarsRoverApiService> in
         return Endpoint(url: "test", sampleResponseClosure: {.networkResponse(200, stubbedResponse("GetPhotos"))}, method: target.method, task: target.task, httpHeaderFields: target.headers)

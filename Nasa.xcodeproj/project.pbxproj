@@ -10,7 +10,6 @@
 		19A757A31664BB22D3611BA8 /* Pods_NasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */; };
 		770773F82009944D004BA918 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770773F72009944D004BA918 /* User.swift */; };
 		770773FB20099C45004BA918 /* PhotosMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770773FA20099C45004BA918 /* PhotosMock.swift */; };
-		770773FD2009C74C004BA918 /* testPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 770773FC2009C74C004BA918 /* testPhoto.png */; };
 		770A51C21FE74CE400511D35 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A51C11FE74CE400511D35 /* ImageCacheService.swift */; };
 		7712580D2004924200E9022B /* PhotosModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712580C2004924200E9022B /* PhotosModelTests.swift */; };
 		771C2D371FE7024F008FB7A0 /* MarsRoverApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C2D361FE7024F008FB7A0 /* MarsRoverApiError.swift */; };
@@ -33,7 +32,9 @@
 		778BC2121FE4B907008B5CE7 /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778BC2111FE4B907008B5CE7 /* NasaUITests.swift */; };
 		77B0CC5A1FF0B86D0047A65C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */; };
 		77B0CC5B1FF0B86D0047A65C /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */; };
-		77B1BCF7200A8F7300950DAE /* testPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B1BCF6200A8F7300950DAE /* testPhoto.png */; };
+		77B1BCF9200AD83700950DAE /* testPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B1BCF8200AD83700950DAE /* testPhoto.png */; };
+		77B1BCFA200ADA4A00950DAE /* testPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 770773FC2009C74C004BA918 /* testPhoto.png */; };
+		77B1BCFC200ADE9700950DAE /* ImageCacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */; };
 		77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */; };
 		77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA8391FE58F1C008F8B0B /* Photos.swift */; };
 		77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */; };
@@ -98,7 +99,8 @@
 		778BC2131FE4B907008B5CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B0CC581FF0B86D0047A65C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		77B0CC591FF0B86D0047A65C /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		77B1BCF6200A8F7300950DAE /* testPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testPhoto.png; path = "Nasa/MarsRover/Stubbed Responses/testPhoto.png"; sourceTree = SOURCE_ROOT; };
+		77B1BCF8200AD83700950DAE /* testPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testPhoto.png; path = Nasa/testPhoto.png; sourceTree = SOURCE_ROOT; };
+		77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheServiceTests.swift; sourceTree = "<group>"; };
 		77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModelTests.swift; sourceTree = "<group>"; };
 		77CCA8391FE58F1C008F8B0B /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModel.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				778BC1F81FE4B907008B5CE7 /* Assets.xcassets */,
 				778BC1FA1FE4B907008B5CE7 /* LaunchScreen.storyboard */,
 				778BC1FD1FE4B907008B5CE7 /* Info.plist */,
+				770773FC2009C74C004BA918 /* testPhoto.png */,
 				773253E41FE79042006E63F6 /* default.png */,
 			);
 			path = Nasa;
@@ -279,11 +282,12 @@
 		778BC2051FE4B907008B5CE7 /* NasaTests */ = {
 			isa = PBXGroup;
 			children = (
-				77B1BCF6200A8F7300950DAE /* testPhoto.png */,
+				77B1BCF8200AD83700950DAE /* testPhoto.png */,
 				770773F920099C29004BA918 /* Mocks */,
 				778BC2081FE4B907008B5CE7 /* Info.plist */,
 				77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */,
 				7712580C2004924200E9022B /* PhotosModelTests.swift */,
+				77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -311,7 +315,6 @@
 			children = (
 				77DF1C022002B93A000D4EB6 /* GetPhotos.json */,
 				7754FF072003079E001AB323 /* GetPhotosMissingImgSrc.json */,
-				770773FC2009C74C004BA918 /* testPhoto.png */,
 			);
 			path = "Stubbed Responses";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			files = (
 				778BC1FC1FE4B907008B5CE7 /* LaunchScreen.storyboard in Resources */,
 				778BC1F91FE4B907008B5CE7 /* Assets.xcassets in Resources */,
+				77B1BCFA200ADA4A00950DAE /* testPhoto.png in Resources */,
 				778BC1F71FE4B907008B5CE7 /* Main.storyboard in Resources */,
 				7754FF082003079E001AB323 /* GetPhotosMissingImgSrc.json in Resources */,
 				77DF1C032002B93A000D4EB6 /* GetPhotos.json in Resources */,
@@ -473,8 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B1BCF7200A8F7300950DAE /* testPhoto.png in Resources */,
-				770773FD2009C74C004BA918 /* testPhoto.png in Resources */,
+				77B1BCF9200AD83700950DAE /* testPhoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +710,7 @@
 			files = (
 				7712580D2004924200E9022B /* PhotosModelTests.swift in Sources */,
 				770773FB20099C45004BA918 /* PhotosMock.swift in Sources */,
+				77B1BCFC200ADE9700950DAE /* ImageCacheServiceTests.swift in Sources */,
 				77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
