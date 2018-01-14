@@ -71,7 +71,7 @@ class RoverImagesListViewModel {
     }
     
     func getMarsRoverImages(imageUrl: URL) -> Observable<UIImage?> {
-        if let cachedImage = imageCache.imageFromCacheWithUrl(name: imageUrl.lastPathComponent) {
+        if let cachedImage = imageCache.getImageFromCache(imageName: imageUrl.lastPathComponent) {
             return Observable.just(cachedImage)
         } else {
             return self.provider.rx.request(MarsRoverApiService.getImage(imagePath: imageUrl.relativePath))
