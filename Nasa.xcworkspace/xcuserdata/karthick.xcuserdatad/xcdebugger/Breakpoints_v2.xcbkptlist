@@ -99,13 +99,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Nasa/MarsRover/Scenes/SceneCoordinator.swift"
-            timestampString = "537751409.176327"
+            timestampString = "537761694.7804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "init(window:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -115,13 +115,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Nasa/MarsRover/Scenes/SceneCoordinator.swift"
-            timestampString = "537751409.176706"
+            timestampString = "537761694.780804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "transition(to:type:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -131,7 +131,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaTests/SceneCoordinatorTests.swift"
-            timestampString = "537751409.176917"
+            timestampString = "537761694.781014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -147,13 +147,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Nasa/MarsRover/Scenes/SceneCoordinator.swift"
-            timestampString = "537751409.17721"
+            timestampString = "537761694.781262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "transition(to:type:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

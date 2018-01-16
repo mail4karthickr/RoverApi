@@ -52,14 +52,18 @@ class SceneCoordinatorTests: XCTestCase {
         XCTAssertTrue(window.rootViewController == MockViewController.getMockViewController(), "Window root viewcontroller and mockrootviewcontroller are not equal")
     }
     
+    func testTransitionToForModal() {
+        
+    }
+    
     func testTransitionToForPushVc() {
         window = UIWindow()
         let mockRootVc = UIViewController()
-        let navCtrl = UINavigationController(rootViewController: mockRootVc)
+        _ = UINavigationController(rootViewController: mockRootVc)
         window.rootViewController = mockRootVc
         sceneCoordinator = SceneCoordinator(window: window)
         sceneCoordinator.transition(to: MockScene.test, type: .push)
-        XCTAssertTrue(navCtrl.topViewController! == MockViewController.getMockViewController(), "Window root viewcontroller and mockrootviewcontroller are not equal")
+        XCTAssertTrue(sceneCoordinator.currentViewController == MockViewController.getMockViewController(), "Window root viewcontroller and mockrootviewcontroller are not equal")
     }
 }
 
