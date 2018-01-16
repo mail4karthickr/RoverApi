@@ -10,15 +10,15 @@ import Foundation
 import RxSwift
 
 class SceneCoordinator: SceneCoordinatorType {
-    fileprivate var window: UIWindow
-    fileprivate var currentViewController: UIViewController
+    var window: UIWindow
+    var currentViewController: UIViewController
     
     required init(window: UIWindow) {
         self.window = window
         currentViewController = window.rootViewController!
     }
     
-    static func actualViewController(for viewController: UIViewController) -> UIViewController {
+    func actualViewController(for viewController: UIViewController) -> UIViewController {
         if let navigationController = viewController as? UINavigationController {
             return navigationController.viewControllers.first!
         } else {
@@ -27,12 +27,12 @@ class SceneCoordinator: SceneCoordinatorType {
     }
     
     @discardableResult
-    func transition(to scene: Scene, type: SceneTransitionType) -> Completable {
+    func transition(to scene: SceneType, type: SceneTransitionType) -> Completable {
         let subject = PublishSubject<Void>()
         let viewController = scene.viewController()
         switch type {
         case .root:
-            currentViewController = SceneCoordinator.actualViewController(for: viewController)
+            currentViewController = actualViewController(for: viewController)
             window.rootViewController = viewController
             subject.onCompleted()
         case .push:
@@ -44,12 +44,12 @@ class SceneCoordinator: SceneCoordinatorType {
                 .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
                 .map { _ in }
                 .bind(to: subject)
-            currentViewController = SceneCoordinator.actualViewController(for: viewController)
+            currentViewController = actualViewController(for: viewController)
         case .modal:
             currentViewController.present(viewController, animated: true) {
                 subject.onCompleted()
             }
-            currentViewController = SceneCoordinator.actualViewController(for: viewController)
+            currentViewController = actualViewController(for: viewController)
         }
         return subject.asObservable().take(1)
             .ignoreElements()
@@ -61,7 +61,7 @@ class SceneCoordinator: SceneCoordinatorType {
         if let presenter = currentViewController.presentingViewController {
             // dismiss a modal controller
             currentViewController.dismiss(animated: animated) {
-                self.currentViewController = SceneCoordinator.actualViewController(for: presenter)
+                self.currentViewController = self.actualViewController(for: presenter)
                 subject.onCompleted()
             }
         } else if let navigationController = currentViewController.navigationController {
@@ -74,7 +74,7 @@ class SceneCoordinator: SceneCoordinatorType {
             guard navigationController.popViewController(animated: animated) != nil else {
                 fatalError("can't navigate back from \(currentViewController)")
             }
-            currentViewController = SceneCoordinator.actualViewController(for: navigationController.viewControllers.last!)
+            currentViewController = self.actualViewController(for: navigationController.viewControllers.last!)
         } else {
             fatalError("Not a modal, no navigation controller: can't navigate back from \(currentViewController)")
         }

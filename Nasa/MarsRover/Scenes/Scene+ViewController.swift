@@ -8,7 +8,11 @@
 
 import UIKit
 
-extension Scene {
+protocol SceneType {
+    func viewController() -> UIViewController
+}
+
+extension Scene: SceneType {
     func viewController() -> UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         switch self {
