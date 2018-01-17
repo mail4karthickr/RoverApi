@@ -52,10 +52,6 @@ class SceneCoordinatorTests: XCTestCase {
         XCTAssertTrue(window.rootViewController == MockViewController.getMockViewController(), "Window root viewcontroller and mockrootviewcontroller are not equal")
     }
     
-    func testTransitionToForModal() {
-        
-    }
-    
     func testTransitionToForPushVc() {
         window = UIWindow()
         let mockRootVc = UIViewController()
@@ -65,6 +61,12 @@ class SceneCoordinatorTests: XCTestCase {
         sceneCoordinator.transition(to: MockScene.test, type: .push)
         XCTAssertTrue(sceneCoordinator.currentViewController == MockViewController.getMockViewController(), "Window root viewcontroller and mockrootviewcontroller are not equal")
     }
+    
+    func testTransitionToForModal() {
+        sceneCoordinator.transition(to: MockScene.test, type: .modal)
+        XCTAssertTrue(sceneCoordinator.currentViewController == MockViewController.getMockViewController(), "Modal viewcontroller presented is not equal to mockviewcontroller")
+    }
+    
 }
 
 enum MockScene {
