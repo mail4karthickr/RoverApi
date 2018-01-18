@@ -37,6 +37,7 @@
 		77B1BCFC200ADE9700950DAE /* ImageCacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */; };
 		77B1BCFE200ADFC400950DAE /* TestPhotoUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1BCFD200ADFC400950DAE /* TestPhotoUtility.swift */; };
 		77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */; };
+		77C40726200F1A4700358862 /* MarsRoverApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C40725200F1A4700358862 /* MarsRoverApiServiceTests.swift */; };
 		77CCA83A1FE58F1C008F8B0B /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA8391FE58F1C008F8B0B /* Photos.swift */; };
 		77CCA83C1FE592A7008F8B0B /* RoverImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */; };
 		77CF09C41FEA47B700C0C450 /* RoverImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */; };
@@ -105,6 +106,7 @@
 		77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheServiceTests.swift; sourceTree = "<group>"; };
 		77B1BCFD200ADFC400950DAE /* TestPhotoUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhotoUtility.swift; sourceTree = "<group>"; };
 		77BE0E1F2000A48000B3CE44 /* RoverImagesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModelTests.swift; sourceTree = "<group>"; };
+		77C40725200F1A4700358862 /* MarsRoverApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverApiServiceTests.swift; sourceTree = "<group>"; };
 		77CCA8391FE58F1C008F8B0B /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		77CCA83B1FE592A7008F8B0B /* RoverImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesListViewModel.swift; sourceTree = "<group>"; };
 		77CF09C31FEA47B700C0C450 /* RoverImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverImagesViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				77B1BCFB200ADE9700950DAE /* ImageCacheServiceTests.swift */,
 				77B1BCFD200ADFC400950DAE /* TestPhotoUtility.swift */,
 				77F5D13E200C1A8D009AFFDD /* SceneCoordinatorTests.swift */,
+				77C40725200F1A4700358862 /* MarsRoverApiServiceTests.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				7712580D2004924200E9022B /* PhotosModelTests.swift in Sources */,
 				77F5D13F200C1A8D009AFFDD /* SceneCoordinatorTests.swift in Sources */,
 				770773FB20099C45004BA918 /* PhotosMock.swift in Sources */,
+				77C40726200F1A4700358862 /* MarsRoverApiServiceTests.swift in Sources */,
 				77B1BCFC200ADE9700950DAE /* ImageCacheServiceTests.swift in Sources */,
 				77BE0E202000A48000B3CE44 /* RoverImagesListViewModelTests.swift in Sources */,
 				77B1BCFE200ADFC400950DAE /* TestPhotoUtility.swift in Sources */,

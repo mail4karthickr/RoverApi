@@ -19,7 +19,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaTests/RoverImagesListViewModelTests.swift"
-            timestampString = "537654051.83167"
+            timestampString = "537948414.897559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
@@ -67,7 +67,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaTests/RoverImagesListViewModelTests.swift"
-            timestampString = "537654051.8317389"
+            timestampString = "537948414.897645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -83,7 +83,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaTests/RoverImagesListViewModelTests.swift"
-            timestampString = "537654051.831786"
+            timestampString = "537948414.897705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -131,7 +131,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NasaTests/SceneCoordinatorTests.swift"
-            timestampString = "537761694.781014"
+            timestampString = "537948414.8978159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -154,6 +154,86 @@
             endingLineNumber = "42"
             landmarkName = "transition(to:type:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/RoverImagesListViewModelTests.swift"
+            timestampString = "537948414.898284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "testGetMarsRoverImageFromApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NasaTests.RoverImagesListViewModelTests.testGetMarsRoverImageFromApi() -&gt; ()"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karthick/Desktop/Nasa/NasaTests/RoverImagesListViewModelTests.swift"
+                  timestampString = "537952636.727019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1988">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Any&gt; in NasaTests.RoverImagesListViewModelTests.testGetMarsRoverImageFromApi() -&gt; ()"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karthick/Desktop/Nasa/NasaTests/RoverImagesListViewModelTests.swift"
+                  timestampString = "537952636.731917"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
+            timestampString = "537952861.530405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "baseURL"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa/MarsRover/Services/MarsRoverApiService.swift"
+            timestampString = "537952861.530829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "path"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
