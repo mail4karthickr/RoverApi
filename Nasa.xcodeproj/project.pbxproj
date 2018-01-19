@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		19A757A31664BB22D3611BA8 /* Pods_NasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */; };
-		770773F82009944D004BA918 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770773F72009944D004BA918 /* User.swift */; };
 		770773FB20099C45004BA918 /* PhotosMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770773FA20099C45004BA918 /* PhotosMock.swift */; };
 		770A51C21FE74CE400511D35 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A51C11FE74CE400511D35 /* ImageCacheService.swift */; };
 		7712580D2004924200E9022B /* PhotosModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712580C2004924200E9022B /* PhotosModelTests.swift */; };
@@ -70,7 +69,6 @@
 		28EEAF25A3F875B9E707FEDD /* Pods-Nasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nasa/Pods-Nasa.release.xcconfig"; sourceTree = "<group>"; };
 		2DD38A50461A141ED60237E7 /* Pods-NasaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NasaTests/Pods-NasaTests.release.xcconfig"; sourceTree = "<group>"; };
 		65581AAA1BD1265571F4EAB6 /* Pods_NasaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		770773F72009944D004BA918 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		770773FA20099C45004BA918 /* PhotosMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMock.swift; sourceTree = "<group>"; };
 		770773FC2009C74C004BA918 /* testPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testPhoto.png; sourceTree = "<group>"; };
 		770A51C11FE74CE400511D35 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				7729F1A61FFDF1B3001EAA42 /* Errors */,
 				7783C2021FEB9FF4005B68E4 /* BindableType.swift */,
 				77CCA8391FE58F1C008F8B0B /* Photos.swift */,
-				770773F72009944D004BA918 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -709,7 +706,6 @@
 				77DF1C062002BD9B000D4EB6 /* JsonTypes.swift in Sources */,
 				77F820051FEF7E760059C118 /* UINavigationController+Rx.swift in Sources */,
 				771D7DCA1FEA405F002B5687 /* SceneCoordinator.swift in Sources */,
-				770773F82009944D004BA918 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

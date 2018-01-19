@@ -53,9 +53,8 @@ final class RoverImagesListViewController: UIViewController, BindableType {
         self.viewModel
             .showLoadingIndicator
             .asDriver()
-            .drive(LoadingViewController.sharedInstance.isHidden)
+            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
             .disposed(by: disposeBag)
-        
         
         let imageUrlsDownloaded = viewModel.startDownloadingImageUrls
             .asObservable()
